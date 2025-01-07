@@ -1,11 +1,11 @@
-import{Routes, Route, Navigate, useLocation } from "react-router-dom";
+import{Routes, Route, Navigate, useLocation, Outlet } from "react-router-dom";
 import Login from "./Pages/Login";
 import Dashboard from"./Pages/Dashboard";
 import Tasks from "./Pages/Tasks";
 import Users from "./Pages/Users";
 import Trash from "./Pages/Trash";
 import TaskDetails from "./Pages/TaskDetails";
-import Toaster from "sonner";
+import { Toaster } from "sonner";
 
 function Layout() {
   const user = "";
@@ -18,7 +18,15 @@ function Layout() {
         {/* {<sidebar /> */}
       </div>
 
+      {/* <MobileSidebar/> */}
 
+      <div className='flex-1 overflow-y-auto'>
+        {/*  <Navbar/> */}
+
+        <div className='p-4 2x1:px-10'>
+          <Outlet />
+        </div>
+      </div>
     </div>
   ) : (
     <Navigate to ='/log-in' state={{ from: location }} replace />
