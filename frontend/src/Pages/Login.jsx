@@ -12,6 +12,9 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const submitHandler = async (data)=> {
+    console.log("Submit")
+  }
   useEffect(() =>{
     user && navigate("/dashboard");
   }, [user]);
@@ -37,8 +40,14 @@ const Login = () => {
         </div>
 
         {/* right side */}
-        <div>
-          
+        <div className='w-full md:w-1/3 p-4 md:p-1 flex-col justify-center items-center'>
+          <form onSubmit={handleSubmit(submitHandler)}
+          className='form-container w-full md:w-[400px] flex flex-col gap-y-8 bg-white px-10 pt-14 pb-14'
+          >
+            <div className=''>
+              <p className='text-blue-600 text-3x1 font-bold text-center'>Welcome back</p>
+            </div>
+          </form>
         </div>
       </div>
     </div>
