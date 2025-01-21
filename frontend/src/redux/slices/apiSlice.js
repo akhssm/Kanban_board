@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery, fetchBseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const API_URI = "http://localhost:8800/api";
 
@@ -10,4 +10,4 @@ export const apiSlice = createApi ({
     tagTypes: [],
     endpoints: (builder) => ({}),
 });
-w;
+
