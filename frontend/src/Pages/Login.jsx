@@ -18,6 +18,7 @@ const Login = () => {
   const submitHandler = async (data)=> {
     console.log("Submit")
   };
+  
   useEffect(() => {
     user && navigate("/dashboard");
   }, [user]);
